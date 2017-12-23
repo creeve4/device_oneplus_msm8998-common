@@ -348,6 +348,11 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0-impl \
+    android.hardware.radio.deprecated@1.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
