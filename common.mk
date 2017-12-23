@@ -212,6 +212,10 @@ PRODUCT_COPY_FILES += \
 #    android.hardware.health@1.0-impl \
 #    android.hardware.health@1.0-service \
 
+# hidl base
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0
+
 # IPv6
 PRODUCT_PACKAGES += \
     ebtables \
