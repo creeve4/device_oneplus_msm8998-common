@@ -350,7 +350,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2 \
-    libprotobuf-cpp-full
+    libprotobuf-cpp-full \
+    rild_socket
 
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.0-impl \
