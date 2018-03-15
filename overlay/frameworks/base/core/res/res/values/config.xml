@@ -30,17 +30,11 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
-        <item>8</item>
-        <item>15</item>
-        <item>30</item>
-        <item>50</item>
-        <item>100</item>
-        <item>200</item>
-        <item>400</item>
-        <item>800</item>
-        <item>1600</item>
-        <item>3200</item>
+        <item>45</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>3000</item>
+        <item>6000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -48,15 +42,11 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>6</item>
-        <item>10</item>
-        <item>20</item>
-        <item>46</item>
-        <item>78</item>
-        <item>96</item>
-        <item>128</item>
-        <item>150</item>
-        <item>220</item>
+        <item>14</item>
+        <item>28</item>
+        <item>110</item>
+        <item>160</item>
+        <item>235</item>
         <item>255</item>
     </integer-array>
 
@@ -65,7 +55,7 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
     <integer name="config_autoBrightnessLightSensorRate">500</integer>
 
@@ -79,6 +69,10 @@
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
     <integer name="config_screenBrightnessSettingDefault">46</integer>
+
+    <!-- If we allow automatic adjustment of screen brightness while dozing, how many times we want
+         to reduce it to preserve the battery. Value of 100% means no scaling. -->
+    <fraction name="config_screenAutoBrightnessDozeScaleFactor">30%</fraction>
 
     <!--<bool name="config_deviceHasVariableButtonBrightness">true</bool>-->
 
