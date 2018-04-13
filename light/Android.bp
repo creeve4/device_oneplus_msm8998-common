@@ -1,3 +1,4 @@
+//
 // Copyright (C) 2018 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,22 +14,19 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.camera.provider@2.4-service.oneplus5",
-    defaults: ["hidl_defaults"],
-    proprietary: true,
+    name: "android.hardware.light@2.0-service.oneplus_8998",
     relative_install_path: "hw",
-    srcs: ["service.cpp"],
-    compile_multilib: "32",
-    init_rc: ["android.hardware.camera.provider@2.4-service.oneplus5.rc"],
+    init_rc: ["android.hardware.light@2.0-service.oneplus_8998.rc"],
+    srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
+        "libbase",
+        "libcutils",
+        "libhardware",
         "libhidlbase",
         "libhidltransport",
-        "liblog",
+        "libhwbinder",
         "libutils",
-        "android.hardware.camera.device@1.0",
-        "android.hardware.camera.device@3.2",
-        "android.hardware.camera.device@3.3",
-        "android.hardware.camera.provider@2.4",
-        "android.hardware.camera.common@1.0",
+        "android.hardware.light@2.0",
     ],
+    proprietary: true,
 }
